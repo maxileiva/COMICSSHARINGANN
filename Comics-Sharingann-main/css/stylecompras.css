@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+/*  titulo */
+.palabraprincipal{
+    color: #642a73;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 50px 0 0 0;
+    font-weight: 100;
+}
+
+.titulo{
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+/* HEADER */
+header{ 
+    width: 100%;
+    height: 100px;    
+    background: #834d9b;  
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(212, 92%, 26%, 0.637), hsla(249, 100%, 13%, 0.664)), url(../img/fondocomic1.jpg);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(246, 100%, 23%, 0.637), hsla(246, 100%, 11%, 0.664)), url(../img/fondocomic1.jpg); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* NAV */
+nav{ /* nav en general */
+    text-align: right;
+    padding: 30px 50px 0 25px;
+}
+
+nav > a{ /*nav atributo*/
+    color: #fff; /* color blanco*/
+    font-weight: 300; /* fuente ligera de la letra */
+    text-decoration: none; /* quita el subrayado de abajo*/
+    margin-right: 10px; /*separa uno del otro */
+    font-size: 18px;
+}
+
+nav > a:hover{ /*nav cuando el mouse pase sobre el*/
+    text-decoration: underline; /* aparece el subrayado de abajo*/
+}   
+
+/* MAIN */
+.presentacion{
+    padding : 30px 0 60px 0;
+}
+.presentacion p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Galeria de imagenes */
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height:100%;/*430px*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 0 0 100px 0;
+}
+
+.container .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+    width: 330px;
+    height: 220px;
+}
+
+
+.container .card h4{
+    font-weight: 600;
+}
+
+.container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+/* FOOTER */
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden; /*para q nada salga del footer*/
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0 ;
+    color: #9e9797;
+}
+
+@media screen and (max-width : 760px){
+
+    .palabraprincipal{
+        color: #642a73;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 40px 0 0 0;
+        font-weight: 100;
+    }
+
+    .presentacion p{
+        padding: 0px 0px 30px 15px;
+        font-weight: 300;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .container .card{
+        width: 280px;
+        height: 390px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .container .card img{
+        width: 100%;
+        height: 200px;
+    }
+
+    .titulo-final{
+        text-align: center;
+        font-size: 18px;
+        margin: 20px 0 0 0 ;
+        color: #9e9797;
+    }
+
+}
+
+@media screen and (max-width : 640px){
+    
+    .container .card{
+        width: 230px;
+        height: 380px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .container .card img{
+        width: 230px;
+        height: 160px;
+    }
+
+    .container .card h4{
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+    .container .card p{
+        padding: 0 1rem;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    .container .card a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #3498db;
+    }
+}
+
+@media screen and (max-width : 550px){
+    
+    nav > a{ /*nav atributo*/
+        color: #fff; /* color blanco*/
+        font-weight: 300; /* fuente ligera de la letra */
+        text-decoration: none; /* quita el subrayado de abajo*/
+        margin-right: 10px; /*separa uno del otro */
+        font-size: 15px;
+    }
+
+    .palabraprincipal{
+        color: #642a73;
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 40px 0 0 0;
+        font-weight: 100;
+    }
+
+    .presentacion p{
+        padding: 0px 0px 30px 15px;
+        font-weight: 300;
+        text-align: center;
+        font-size:20px;
+    }
+
+    .container .card{
+        width: 180px;
+        height: 360px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .container .card img{
+        width: 180px;
+        height: 160px;
+    }
+    
+    .container .card h4{
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+    .container .card p{
+        padding: 0 1rem;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    .container .card a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #3498db;
+    }
+}
+
+@media screen and (max-width : 460px){
+
+    .container .card{
+        width: 150px;
+        height: 330px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .container .card img{
+        width: 150px;
+        height: 140px;
+    }
+    
+    .container .card h4{
+        font-weight: 600;
+        font-size: 12px;
+    }
+    
+    .container .card p{
+        padding: 0 1rem;
+        font-size: 10px;
+        font-weight: 300;
+    }
+    
+    .container .card a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #3498db;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width : 380px){
+
+    .palabraprincipal{
+        color: #642a73;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 40px 0 0 0;
+        font-weight: 100;
+    }
+
+    .presentacion p{
+        padding: 0px 0px 30px 15px;
+        font-weight: 300;
+        text-align: center;
+        font-size:16px;
+    }
+
+    .container .card{
+        width: 240px;
+        height: 330px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.25s;
+    }
+
+    .container .card img{
+        width: 240px;
+        height: 150px;
+    }
+    
+    .container .card h4{
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+    .container .card p{
+        padding: 0 1rem;
+        font-size: 13px;
+        font-weight: 300;
+    }
+    
+    .container .card a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #3498db;
+        font-size: 13px;
+    }
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Ajusta la altura según sea necesario */
+    background: linear-gradient(to right, hsla(0, 0%, 25%, 0.637), hsla(0, 0%, 21%, 0.664));
+    z-index: 1000;
+    padding: 0.5rem; /* Elimina el relleno */
+    margin: 0; /* Elimina el margen */
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 15px 0;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}

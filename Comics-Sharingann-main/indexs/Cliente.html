@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylecliente.css">
+    <link rel="shortcut icon" href="/img/comics/comic.png" type="image/x-icon">
+    <title>CLIENTE</title>
+</head>
+<body>
+    <section class="content">
+        <div class="card">
+            <form action="/indexs/index.html" method="GET" id="myForm">
+                <label for="email">EMAIL</label><br>
+                <input type="email" name="email" required><br><br>
+                <label for="telefono">TELEFONO</label><br>
+                <input type="number" name="telefono" required><br><br>
+                <input type="submit" value="ACEPTAR" style="font-family: 'Playball', cursive;">
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            // Verificar si los campos de correo electrónico y teléfono están vacíos
+            var email = document.getElementById("email").value.trim();
+            var telefono = document.getElementById("telefono").value.trim();
+            
+            if (email === "" || telefono === "") {
+                // Si uno de los campos está vacío, prevenir el envío del formulario
+                event.preventDefault();
+                alert("Por favor, complete todos los campos.");
+            }
+        });
+    </script>
+</body>
+</html>
